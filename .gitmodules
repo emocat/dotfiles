@@ -6,16 +6,16 @@
 	url = https://github.com/gpakosz/.tmux.git
 [submodule "vim/plugged/auto-pairs"]
 	path = vim/plugged/auto-pairs
-	url = git://github.com/jiangmiao/auto-pairs.git
+	url = https://github.com/jiangmiao/auto-pairs.git 
 [submodule "vim/plugged/jellybeans.vim"]
 	path = vim/plugged/jellybeans.vim
-	url = git@github.com:nanotech/jellybeans.vim.git
+	url = https://github.com/nanotech/jellybeans.vim.git 
 [submodule "vim/plugged/vim-airline"]
 	path = vim/plugged/vim-airline
-	url = git@github.com:vim-airline/vim-airline.git
+	url = https://github.com/vim-airline/vim-airline.git 
 [submodule "vim/plugged/vim-template"]
 	path = vim/plugged/vim-template
-	url = git@github.com:aperezdc/vim-template.git
+	url = https://github.com/aperezdc/vim-template.git 
 [submodule "vim/plugged/gruvbox"]
 	path = vim/plugged/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
