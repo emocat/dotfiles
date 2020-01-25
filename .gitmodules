@@ -43,9 +43,3 @@
 [submodule "vim/plugged/jellybeans.vim"]
 	path = vim/plugged/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
-[submodule "gdb/pwndbg"]
-	path = gdb/pwndbg
-	url = https://github.com/pwndbg/pwndbg.git
-[submodule "gdb/Pwngdb"]
-	path = gdb/Pwngdb
-	url = https://github.com/scwuaptx/Pwngdb.git
