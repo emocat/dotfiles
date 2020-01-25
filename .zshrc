@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/hal/.oh-my-zsh"
+export ZSH="~/.dotfiles/oh-my-zsh"
 export PATH=$PATH:/home/hal/.local/bin
 export PATH=$PATH:/usr/local/vim/bin
 export TERM="xterm-256color"
