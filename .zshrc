@@ -3,11 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
-#export PATH=$PATH:/home/hal/.local/bin
-export PATH=$HOME/.local/bin:$PATH
-#export PATH=$PATH:/usr/local/vim/bin
-export TERM="xterm-256color"
-export EDITOR=vim
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
