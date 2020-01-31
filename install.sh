@@ -45,6 +45,4 @@ git clone https://github.com/scwuaptx/Pwngdb.git ~/.Pwngdb
 cp $HOME/.dotfiles/.gdbinit ~/
 
 # QEMU
-sudo apt-get install qemu
-
 # DOCKER
