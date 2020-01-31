@@ -24,10 +24,11 @@ ln -s -f $HOME/.dotfiles/tmux/.tmux.conf ~
 ln -s -f $HOME/.dotfiles/.tmux.conf.local ~/
 
 # VIM
-# TBD: templates / ycm
+# TBD: ycm
 sudo apt-get -y install fonts-powerline
 ln -s -f $HOME/.dotfiles/.vimrc ~/
 ln -s -f $HOME/.dotfiles/vim ~/.vim
+ln -s -f $HOME/.dotfiles/templates/* $HOME/.dotfiles/vim/plugged/vim-template/templates
 
 # GIT
 ln -s -f $HOME/.dotfiles/.gitconfig ~/
