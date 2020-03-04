@@ -1,2 +1,3 @@
-vim/plugged/
+.DS_Store
 *.swp
+vim/plugged/
