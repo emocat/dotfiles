@@ -1,67 +1,67 @@
-" color desert
-
-" Format {{{
-set nu			        " 显示行号
-set backspace=2
-set tabstop=4	        " TAB缩进
+" basic
+syntax on
+set ruler                     " show the line number on the bar
+set more                      " use more prompt
+set autoread                  " watch for file changes
+set number                    " line numbers
+set hidden
+set noautowrite               " don't automagically write on :next
+set nocompatible              " vim, not vi
+set autoindent smartindent    " auto/smart indent
+set smarttab                  " tab and backspace are smart
+set tabstop=4                 " 6 spaces
 set shiftwidth=4
 set expandtab
-set smarttab
-set autoindent          " 自动对齐
-set smartindent         " 智能缩进
-set foldmethod=marker   " 折叠
-syntax on               " 语法高亮
-" }}}
+set scrolloff=5               " keep at least 5 lines above/below
+set sidescrolloff=5           " keep at least 5 lines left/right
+set history=200
+set backspace=indent,eol,start
+set linebreak
+set ttyfast                   " we have a fast terminal
+set fileformats=unix
+filetype on                   " Enable filetype detection
+filetype indent on            " Enable filetype-specific indenting
+filetype plugin on            " Enable filetype-specific plugins"
+set wildmode=longest:full
+set wildmenu                  " menu has tab completion
+
+" searching
+set incsearch                 " incremental search
+set ignorecase                " search ignoring case
+set hlsearch                  " highlight the search
+set showmatch                 " show matching bracket
+set diffopt=filler,iwhite     " ignore all whitespace and sync
+set nobackup      
 
 
-set nocompatible    " 去除vi的一致性
-set nobackup        " 去除备份
-
-
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" beautify {{{
-" airline-setting {{{
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" let g:airline_theme='molokai'
+let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1  " 顶部状态栏
-" let g:airline#extensions#tabline#buffer_nr_show = 1
-" }}}
-" theme-setting {{{
+"let g:airline#extensions#tabline#enabled = 1  " 顶部状态栏
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
 Plug 'flazz/vim-colorschemes'
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
-" }}}
-"中文帮助文档
-Plug 'yianwillis/vimcdoc'
-" }}}
 
-"括号补全
 Plug 'jiangmiao/auto-pairs'
-"Tab显示
 Plug 'yggdroot/indentline'
-"Markdown支持
 Plug 'plasticboy/vim-markdown'
-"YCM
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py'}
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
 Plug 'aperezdc/vim-template'
 
-
-" Initialize plugin system
 call plug#end()
 
+
 set background=dark
-" colorscheme gruvbox
+colorscheme gruvbox
 
 
 " Settings of IndentLine
