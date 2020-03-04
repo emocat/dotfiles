@@ -7,9 +7,11 @@ set number                    " line numbers
 set hidden
 set noautowrite               " don't automagically write on :next
 set nocompatible              " vim, not vi
-set autoindent smartindent    " auto/smart indent
+" set autoindent 
+set smartindent   
 set smarttab                  " tab and backspace are smart
-set tabstop=4                 " 6 spaces
+set tabstop=4 
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set scrolloff=5               " keep at least 5 lines above/below
@@ -24,6 +26,13 @@ filetype indent on            " Enable filetype-specific indenting
 filetype plugin on            " Enable filetype-specific plugins"
 set wildmode=longest:full
 set wildmenu                  " menu has tab completion
+set t_Co=256
+
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
 
 " searching
 set incsearch                 " incremental search
