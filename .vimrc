@@ -70,7 +70,7 @@ call plug#end()
 
 
 set background=dark
-colorscheme gruvbox
+colorscheme twilight256 
 
 
 " Settings of IndentLine
