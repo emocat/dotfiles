@@ -10,8 +10,6 @@ sudo apt-get -y install zsh
 sudo apt-get -y install tmux
 sudo apt-get -y install gdb
 
-git submodule update --init --recursive
-
 # ZSH
 mv ~/.zshrc ~/.zshrc.bak
 ln -s -f $HOME/.dotfiles/.zshrc ~/
