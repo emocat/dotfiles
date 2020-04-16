@@ -1,32 +1,33 @@
 #!/bin/sh
 
 # Basic components
+sudo apt-get -y install build-essential make cmake curl wget
 sudo apt-get -y install libc6-dev libc6-dbg
 sudo apt-get -y install	libc6-i386 libc6-dev:i386 libc6-dbg:i386
 sudo apt-get -y install python python-pip python-dev
+sudo apt-get -y install python3 python3-pip python3-dev
+sudo apt-get -y install fonts-powerline
 pip install --user --upgrade pip
+pip install --user setuptools
 
 sudo apt-get -y install zsh
 sudo apt-get -y install tmux
 sudo apt-get -y install gdb
 
 # ZSH
-mv ~/.zshrc ~/.zshrc.bak
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -s -f $HOME/.dotfiles/.zshrc ~/
 ln -s -f $HOME/.dotfiles/.zshenv ~/
-git clone https://github.com/zsh-users/zsh-autosuggestions ./oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ./oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # TMUX
-ln -s -f $HOME/.dotfiles/tmux/.tmux.conf ~
-ln -s -f $HOME/.dotfiles/.tmux.conf.local ~/
+git clone https://github.com/gpakosz/.tmux.git $HOME/
+ln -s -f $HOME/.tmux/.tmux.conf ~/
+cp $HOME/.dotfiles/.tmux.conf.local ~/
 
 # VIM
-# TBD: ycm
-sudo apt-get -y install fonts-powerline
-ln -s -f $HOME/.dotfiles/.vimrc ~/
-ln -s -f $HOME/.dotfiles/vim ~/.vim
-ln -s -f $HOME/.dotfiles/templates/* $HOME/.dotfiles/vim/plugged/vim-template/templates
+cp $HOME/.dotfiles/.vimrc ~/
 
 # GIT
 ln -s -f $HOME/.dotfiles/.gitconfig ~/
@@ -43,5 +44,3 @@ git clone https://github.com/pwndbg/pwndbg ~/.pwndbg
 git clone https://github.com/scwuaptx/Pwngdb.git ~/.Pwngdb
 cp $HOME/.dotfiles/.gdbinit ~/
 
-# QEMU
-# DOCKER
