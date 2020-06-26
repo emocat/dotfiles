@@ -6,7 +6,7 @@ sudo apt-get -y install libc6-dev libc6-dbg
 sudo apt-get -y install	libc6-i386 libc6-dev:i386 libc6-dbg:i386
 sudo apt-get -y install python python-pip python-dev
 sudo apt-get -y install python3 python3-pip python3-dev
-sudo apt-get -y install fonts-powerline
+
 pip install --user --upgrade pip
 pip install --user setuptools
 
@@ -28,9 +28,6 @@ cp $HOME/.dotfiles/.tmux.conf.local ~/
 
 # VIM
 cp $HOME/.dotfiles/.vimrc ~/
-
-# GIT
-ln -s -f $HOME/.dotfiles/.gitconfig ~/
 
 # PWNTOOLS
 pip install pwntools --user
