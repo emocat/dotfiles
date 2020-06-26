@@ -47,10 +47,11 @@ Plug 'flazz/vim-colorschemes'
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
-
 Plug 'jiangmiao/auto-pairs'
 
-" Plug 'SirVer/ultisnips'
+Plug 'ervandew/supertab'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'aperezdc/vim-template'
 let g:templates_directory = ['~/.dotfiles/templates/']
@@ -58,18 +59,50 @@ let g:templates_directory = ['~/.dotfiles/templates/']
 call plug#end()
 
 set background=dark
-" colorscheme twilight256
-colorscheme jellybeans
-let g:jellybeans_use_term_italics = 1
+colorscheme twilight256
+" colorscheme jellybeans
+" let g:jellybeans_use_term_italics = 1
 
 " YouCompleteMe config
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-" let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
-" let g:ycm_min_num_identifier_candidate_chars = 3
-" let g:SuperTabDefaultCompletionType = '<C-n>'
-" let g:ycm_show_diagnostics_ui = 0
-" let g:ycm_enable_diagnostic_signs = 0
-" let g:ycm_enable_diagnostic_highlighting = 0
-" set completeopt=menu,menuone
-" let g:ycm_add_preview_to_completeopt = 0
+" --------------------
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>'] 
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:ycm_key_select_completion = '<C-l>'
+
+let g:ycm_python_binary_path = '/usr/bin/python'
+let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
+let g:ycm_min_num_identifier_candidate_chars = 2
+
+" close diagnostics
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+
+" close preview
+set completeopt=menu,menuone
+let g:ycm_add_preview_to_completeopt = 0
+
+" change color theme
+highlight PMenu ctermfg=0 ctermbg=222 guifg=black guibg=darkgrey
+highlight PMenuSel ctermfg=15 ctermbg=8 guifg=darkgrey guibg=black
+
+" --------------------
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" clipboard support
+if has("clipboard")
+	set clipboard=unnamed " copy to the system clipboard
+
+	if has("unnamedplus") " X11 support
+		set clipboard+=unnamedplus
+	endif
+endif
+
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/snippets']
+
