@@ -17,7 +17,7 @@ sudo apt-get -y install gdb
 # ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp $HOME/.dotfiles/.zshrc ~/
-cp $HOME/.dotfiles/.zshenv ~/
+cp $HOME/.dotfiles/.zprofile ~/
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
