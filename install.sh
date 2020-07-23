@@ -22,7 +22,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/cust
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # TMUX
-git clone https://github.com/gpakosz/.tmux.git $HOME/
+git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
 ln -s -f $HOME/.tmux/.tmux.conf ~/
 cp $HOME/.dotfiles/.tmux.conf.local ~/
 
