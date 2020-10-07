@@ -50,6 +50,8 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'ervandew/supertab'
+" Compatiple with old version vim
+" Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer', 'commit':'d98f896' }
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
