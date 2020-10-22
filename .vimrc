@@ -43,16 +43,16 @@ Plug 'itchyny/lightline.vim'
     set laststatus=2              " always show status line
     set noshowmode                " don't show mode on the last line"
 
-Plug 'flazz/vim-colorschemes'
-Plug 'tomasr/molokai'
+" Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'ervandew/supertab'
 " Compatiple with old version vim
-" Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer', 'commit':'d98f896' }
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer', 'commit':'d98f896' }
+" Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'aperezdc/vim-template'
@@ -60,10 +60,26 @@ let g:templates_directory = ['~/.dotfiles/templates/']
 
 call plug#end()
 
+" This is only necessary if you use "set termguicolors".
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+
 set background=dark
-colorscheme twilight256
-" colorscheme jellybeans
+set cursorline
+
+colorscheme dracula
+" colorscheme gruvbox
+
+" jellybeans settings
+" let g:jellybeans_overrides = {
+" \    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+" \}
+" if has('termguicolors') && &termguicolors
+"     let g:jellybeans_overrides['background']['guibg'] = 'none'
+" endif
 " let g:jellybeans_use_term_italics = 1
+" colorscheme jellybeans
 
 " YouCompleteMe config
 " --------------------
