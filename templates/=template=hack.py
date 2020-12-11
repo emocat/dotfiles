@@ -9,17 +9,21 @@ context.arch = 'amd64'
 context.log_level = "debug"
 context.terminal = ['tmux', 'split', '-h']
 
+RHOST = ""
+RPORT = 0 
+
 binary = ("./pwn")
-elf = ELF(binary, checksec=False)
+elf = ELF([binary])
 libc = elf.libc
 
 if not args['REMOTE']:
     r = process(binary)
 else:
-    r = remote("pwn.it", 3333)
+    r = remote(RHOST, RPORT)
 
 def debug():
-    gdb.attach(r)
+    if len(sys.argv) > 1 and sys.argv[1] == 'd':
+        gdb.attach(r, "")
 
 %HERE%
 
