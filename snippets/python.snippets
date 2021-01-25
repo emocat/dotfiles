@@ -7,11 +7,11 @@ r.sendline("${1}")
 endsnippet
 
 snippet sa
-r.sendafter("${1}",${2:payload})
+r.sendafter("${1}", ${2:payload})
 endsnippet
 
 snippet sla
-r.sendlineafter("${1}",${2:payload})
+r.sendlineafter("${1}", ${2:payload})
 endsnippet
 
 snippet r
@@ -35,16 +35,16 @@ p64(${1})
 endsnippet
 
 snippet pwn
-from pwn import p32,p64,remote,process,fit,ELF
-from pwn import asm,disasm,log,context
-import sys
+from pwn import *
+context.arch = "${1:amd64}"
+context.log_level = "debug"
 endsnippet
 
 snippet csu
 def ret2csu(rdi,rsi,rdx,func_got):
 	return p64(0)+p64(1)+p64(func_got)+p64(rdx)+p64(rsi)+p64(rdi)+p64(${1:csubase})+"a"*8
-
 endsnippet
+
 snippet packfile
 def pack_file(_flags = 0,
 		_IO_read_ptr = 0,
