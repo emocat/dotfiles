@@ -29,10 +29,6 @@ git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
 ln -s -f $HOME/.tmux/tmux.conf ~/.tmux.conf
 cp $HOME/.dotfiles/tmux.conf.local ~/.tmux.conf.local
 
-# VIM
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-cp $HOME/.dotfiles/vimrc ~/.vimrc
-
 # PWNTOOLS
 pip install pwntools --user
 sudo apt-get -y install ruby-dev
