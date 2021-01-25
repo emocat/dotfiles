@@ -35,6 +35,8 @@ set ignorecase                " search ignoring case
 set hlsearch                  " highlight the search
 set showmatch                 " show matching bracket
 set diffopt=filler,iwhite     " ignore all whitespace and sync  
+" clear last search highlight
+nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
