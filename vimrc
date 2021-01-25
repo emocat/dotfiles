@@ -3,6 +3,7 @@ syntax on
 set ruler                     " show the line and column number of the cursor position
 set autoread                  " watch for file changes
 set number                    " line numbers
+set relativenumber            " relative line number
 set noautowrite               " don't automagically write on :next
 set nocompatible              " vim, not vi
 set scrolloff=5               " keep at least 5 lines above/below
