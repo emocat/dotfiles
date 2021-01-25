@@ -26,7 +26,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 
 # TMUX
 git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
-ln -s -f $HOME/.tmux/tmux.conf ~/.tmux.conf
+ln -s -f $HOME/.tmux/.tmux.conf ~/.tmux.conf
 cp $HOME/.dotfiles/tmux.conf.local ~/.tmux.conf.local
 
 # PWNTOOLS
