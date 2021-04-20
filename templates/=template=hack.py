@@ -8,7 +8,7 @@ from pwn import *
 
 context.arch = 'amd64'
 context.log_level = 'debug'
-context.terminal = ['tmux', 'split', '-h']
+context.terminal = ['tmux', 'split', '-hp', '60']
 
 RHOST = ""
 RPORT = 0 
